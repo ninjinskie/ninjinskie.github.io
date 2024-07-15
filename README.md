@@ -1,0 +1,2 @@
+# ninjinskie.github.io
+webpage
