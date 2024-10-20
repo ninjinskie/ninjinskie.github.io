@@ -1,0 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body covers the full height of the page */
+}
+
+body {
+    background-image: url("new-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px #000000;
+    margin: 0px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0; /* Adjust as needed for consistent heading spacing */
+    padding: 0;
+}
+
+p {
+    margin-left: 200px; /* Adds margin around all <p> elements */
+    margin-right: 200px;
+}
+
+ul {
+    list-style-position: inside; /* Ensures the bullets are inside the margin */
+    padding-left: 200px; /* Matches the left padding of paragraphs */
+    margin: 0; /* Resets default margins */
+}
+
+li {
+    text-align: left; /* Aligns the text in list items to the left */
+    margin-bottom: 10px; /* Adds some spacing between list items */
+}
+
+img {
+    display: inline-block;
+}
+
+/* visited link */
+a:visited, a:link {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: red;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        text-align: left; /* Align text to left for better readability */
+    }
+
+    p, ul {
+        margin-left: 20px; /* Reduces side margins for mobile */
+        margin-right: 20px;
+    }
+
+    ul {
+        padding-left: 20px; /* Adjust padding for better list appearance */
+        margin-left: 20px; /* Reduces side margins for mobile */
+        margin-right: 20px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 15px 0; /* Adjust heading margins for mobile */
+        margin-left: 20px; /* Reduces side margins for mobile */
+        margin-right: 20px;
+    }
+
+    img {
+        max-width: 100%; /* Ensures images fit within mobile screen width */
+        height: auto;
+        padding-left: 20px; /* Adjust padding for better list appearance */
+
+    }
+}
