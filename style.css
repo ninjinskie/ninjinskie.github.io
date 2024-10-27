@@ -1,88 +1,150 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensures the body covers the full height of the page */
+    height: 100%;
 }
 
 body {
-    background-image: url("new-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px #000000;
-    margin: 0px auto;
-}
+    background: url('new-bg.jpg') repeat;
+    color: #FFFF00;
+    font-family: "Verdana", "Courier New", sans-serif; 
+    text-align: center; 
+    padding: 20px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 20px 0; /* Adjust as needed for consistent heading spacing */
+  .marquee {
+    display: inline-block;
+    font-size: 20px;
+    color: #FF00FF;
+    animation: marquee 5s linear infinite;
+    margin: 20px 0;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  table {
+    margin: 0 auto;
+    border-spacing: 20px;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  img.button, img {
+    border: 3px solid #FF00FF !important; 
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  img.button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+
+h2, h3, h4, h5, h6 {
+    color: #FF00FF;
+    margin: 20px 0;
     padding: 0;
 }
 
-p {
-    margin-left: 200px; /* Adds margin around all <p> elements */
-    margin-right: 200px;
-}
+h1 {
+    font-size: 48px;
+    color: #FFFF00;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px;
+    line-height: 1.6;
+  }
+
+
 
 ul {
-    list-style-position: inside; /* Ensures the bullets are inside the margin */
-    padding-left: 200px; /* Matches the left padding of paragraphs */
-    margin: 0; /* Resets default margins */
+    list-style-position: inside;
+    padding-left: 200px;
+    margin: 0;
 }
 
 li {
-    text-align: left; /* Aligns the text in list items to the left */
-    margin-bottom: 10px; /* Adds some spacing between list items */
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 img {
-    display: inline-block;
+        border: 3px solid #FF00FF;
+        box-shadow: 0 0 10px #FF00FF;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+img:hover {
+transform: scale(1.1);
+box-shadow: 0 0 20px #FF00FF;
 }
 
-/* visited link */
-a:visited, a:link {
-    color: yellow;
+.button {
+    border: none;
     text-decoration: none;
 }
 
-a:hover {
-    color: orange;
-}
+/* Links */
+a {
+    color: #ffae00;  
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #FF00FF;
+    text-shadow: 1px 1px 5px #FF00FF;
+  }
 
 a:active {
     color: red;
 }
 
+/* Audio player styling */
+audio {
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     body {
-        text-align: left; /* Align text to left for better readability */
+        text-align: left;
     }
 
     p, ul {
-        margin-left: 20px; /* Reduces side margins for mobile */
+        margin-left: 20px;
         margin-right: 20px;
     }
 
     ul {
-        padding-left: 20px; /* Adjust padding for better list appearance */
-        margin-left: 20px; /* Reduces side margins for mobile */
+        padding-left: 20px;
+        margin-left: 20px;
         margin-right: 20px;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        margin: 15px 0; /* Adjust heading margins for mobile */
-        margin-left: 20px; /* Reduces side margins for mobile */
+        margin: 15px 0;
+        margin-left: 20px;
         margin-right: 20px;
     }
 
     img {
-        max-width: 100%; /* Ensures images fit within mobile screen width */
+        max-width: 100%;
         height: auto;
-        padding-left: 20px; /* Adjust padding for better list appearance */
+        padding-left: 20px;
+    }
 
+    audio {
+        width: 90%;
+        margin: 20px;
     }
 }
