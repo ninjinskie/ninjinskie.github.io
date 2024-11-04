@@ -143,6 +143,58 @@ a:hover {
   text-shadow: 1px 1px 5px #FF00FF;
 }
 
+/* Base styling for links with rainbow animation */
+.link {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: rainbow 4s linear infinite;
+}
+
+/* Set initial colors for each link and add unique animation delays */
+.link-1 {
+  color: #ff0000; /* Red */
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+  animation-delay: 0s;
+}
+
+.link-2 {
+  color: #ff00ff; /* Magenta */
+  text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+  animation-delay: 0.67s;
+}
+
+.link-3 {
+  color: #0000ff; /* Blue */
+  text-shadow: 2px 2px 4px rgba(0, 0, 255, 0.5);
+  animation-delay: 1.34s;
+}
+
+.link-4 {
+  color: #00ffff; /* Cyan */
+  text-shadow: 2px 2px 4px rgba(0, 255, 255, 0.5);
+  animation-delay: 2s;
+}
+
+.link-5 {
+  color: #00ff00; /* Green */
+  text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.5);
+  animation-delay: 2.67s;
+}
+
+.link-6 {
+  color: #ffff00; /* Yellow */
+  text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.5);
+  animation-delay: 3.34s;
+}
+
+.link-7 {
+  color: #ff0000; /* Red (repeat for wrap-around) */
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+  animation-delay: 4s;
+}
+
+
+
 audio {
   margin: 20px auto;
   display: block;
