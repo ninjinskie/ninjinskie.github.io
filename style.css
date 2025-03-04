@@ -227,3 +227,77 @@ audio {
     max-width: 300px;
   }
 }
+
+/* Make the blog page full-width and full-height */
+.blog-page {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url('new-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background overlay to keep it dark */
+.blog-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 50, 0.8); /* Dark overlay */
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+/* Blog container now full screen */
+.blog-container {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+/* Blog post styles */
+.blog-post {
+  background-color: rgba(0, 0, 50, 0.7);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post h2 {
+  font-size: 28px;
+  color: #FF00FF; /* Magenta */
+  animation: rainbow 3s linear infinite;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #00ffff; /* Cyan */
+  text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.5);
+  font-style: italic;
+}
+
+/* Animated title */
+.animated-title {
+  font-size: 48px;
+  animation: rainbow 4s linear infinite;
+  text-align: center;
+}
+
+/* Make sure the page scrolls if needed */
+body, html {
+  overflow-y: auto;
+}
+
